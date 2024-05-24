@@ -1,0 +1,17 @@
+---
+import { CardGrid } from '@astrojs/starlight/components'
+
+import ShowcaseTextCard, { type ShowcaseTextCardProps } from './ShowcaseTextCard.astro'
+
+export type ShowcaseTextProps = Props
+
+interface Props {
+  entries: ShowcaseTextCardProps[]
+}
+
+const { entries } = Astro.props
+---
+
+<CardGrid>
+  {entries.map((entry) => <ShowcaseTextCard {...entry} />)}
+</CardGrid>

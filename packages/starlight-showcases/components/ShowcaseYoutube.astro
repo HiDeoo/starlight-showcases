@@ -6,12 +6,12 @@ import ShowcaseYoutubeCard, { type ShowcaseYoutubeCardProps } from './ShowcaseYo
 export type ShowcaseYoutubeProps = Props
 
 interface Props {
-  videos: ShowcaseYoutubeCardProps[]
+  entries: ShowcaseYoutubeCardProps[]
 }
 
-const { videos } = Astro.props
+const { entries } = Astro.props
 ---
 
 <CardGrid>
-  {videos.map((video) => <ShowcaseYoutubeCard {...video} />)}
+  {entries.map((entry) => <ShowcaseYoutubeCard {...entry} />)}
 </CardGrid>
