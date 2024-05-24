@@ -1,0 +1,55 @@
+---
+import { Tweet } from '@astro-community/astro-embed-twitter'
+
+interface Props {
+  href: string
+}
+
+const { href } = Astro.props
+---
+
+<div class="starlight-showcases-twitter-card">
+  <Tweet id={href} />
+</div>
+
+<style>
+  .starlight-showcases-twitter-card {
+    color: var(--sl-color-gray-3);
+    font-weight: 600;
+    line-height: 1.5;
+    position: relative;
+  }
+
+  .starlight-showcases-twitter-card :global(a) {
+    color: var(--sl-color-gray-3);
+  }
+
+  .starlight-showcases-twitter-card :global(blockquote) {
+    --tc-border-color: var(--sl-color-gray-5);
+    --tc-padding: 1rem;
+
+    border-radius: 0.5rem;
+    box-shadow: var(--sl-shadow-sm);
+  }
+
+  .starlight-showcases-twitter-card :global(blockquote > p) {
+    color: var(--sl-color-text);
+    font-weight: 400;
+    line-height: var(--sl-line-height);
+    margin-bottom: calc(var(--tc-padding) * 2);
+  }
+
+  .starlight-showcases-twitter-card :global(blockquote > p a) {
+    color: var(--sl-color-text-accent);
+  }
+
+  .starlight-showcases-twitter-card :global(blockquote > p::after) {
+    background-color: var(--sl-color-gray-5);
+    bottom: calc(var(--tc-padding) * 2 + 1lh);
+    content: '';
+    height: 1px;
+    left: 0;
+    position: absolute;
+    width: 100%;
+  }
+</style>

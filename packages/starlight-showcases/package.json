@@ -14,6 +14,7 @@
     "lint": "prettier -c --cache . && eslint . --cache --max-warnings=0 && tsc --noEmit"
   },
   "dependencies": {
+    "@astro-community/astro-embed-twitter": "^0.5.4",
     "@astro-community/astro-embed-youtube": "^0.5.2"
   },
   "peerDependencies": {

@@ -1,0 +1,22 @@
+---
+import ShowcaseTwitterCard from './ShowcaseTwitterCard.astro'
+
+export type ShowcaseTwitterProps = Props
+
+interface Props {
+  entries: string[]
+}
+
+const { entries } = Astro.props
+---
+
+<div class="not-content sl-flex">
+  {entries.map((href) => <ShowcaseTwitterCard {href} />)}
+</div>
+
+<style>
+  div {
+    flex-direction: column;
+    gap: 1rem;
+  }
+</style>

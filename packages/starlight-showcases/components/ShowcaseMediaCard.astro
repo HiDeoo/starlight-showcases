@@ -10,17 +10,17 @@ const { description, href, title } = Astro.props
 const Element = href ? 'a' : 'div'
 ---
 
-<li class="not-content sl-flex">
+<div class="not-content sl-flex">
   <Element {href} class="starlight-showcases-media-card">
     <div class="starlight-showcases-media-asset">
       <slot />
     </div>
-    <div class="starlight-showcases-infos">
+    <div class="starlight-showcases-infos sl-flex">
       <p class="starlight-showcases-title">{title}</p>
       {description && <p class="starlight-showcases-description">{description}</p>}
     </div>
   </Element>
-</li>
+</div>
 
 <style>
   .starlight-showcases-media-card {
@@ -47,7 +47,6 @@ const Element = href ? 'a' : 'div'
 
   .starlight-showcases-infos {
     border-top: 1px solid var(--sl-color-gray-5);
-    display: flex;
     flex-direction: column;
     gap: 0.5rem;
     padding: 1rem;
