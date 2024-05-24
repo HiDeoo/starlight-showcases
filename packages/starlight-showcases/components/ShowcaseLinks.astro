@@ -1,0 +1,17 @@
+---
+import { CardGrid } from '@astrojs/starlight/components'
+
+import ShowcaseLink, { type ShowcaseLinkProps } from './ShowcaseLink.astro'
+
+export type ShowcaseLinksProps = Props
+
+interface Props {
+  links: ShowcaseLinkProps[]
+}
+
+const { links } = Astro.props
+---
+
+<CardGrid>
+  {links.map((link) => <ShowcaseLink {...link} />)}
+</CardGrid>
