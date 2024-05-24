@@ -1,1 +1,1 @@
-# starlight-showcases
+packages/starlight-showcases/README.md
