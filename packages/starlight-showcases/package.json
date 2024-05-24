@@ -13,6 +13,9 @@
     "test": "echo \"Error: no test implemented.\" && exit 1",
     "lint": "prettier -c --cache . && eslint . --cache --max-warnings=0 && tsc --noEmit"
   },
+  "dependencies": {
+    "@astro-community/astro-embed-youtube": "^0.5.2"
+  },
   "peerDependencies": {
     "@astrojs/starlight": ">=0.23.0"
   },

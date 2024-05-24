@@ -1,0 +1,17 @@
+---
+import { CardGrid } from '@astrojs/starlight/components'
+
+import ShowcaseYoutubeCard, { type ShowcaseYoutubeCardProps } from './ShowcaseYoutubeCard.astro'
+
+export type ShowcaseYoutubeProps = Props
+
+interface Props {
+  videos: ShowcaseYoutubeCardProps[]
+}
+
+const { videos } = Astro.props
+---
+
+<CardGrid>
+  {videos.map((video) => <ShowcaseYoutubeCard {...video} />)}
+</CardGrid>
