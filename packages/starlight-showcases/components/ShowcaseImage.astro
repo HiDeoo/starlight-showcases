@@ -1,0 +1,16 @@
+---
+import ShowcaseGrid, { type ShowcaseGridProps } from './ShowcaseGrid.astro'
+import ShowcaseImageCard, { type ShowcaseImageCardProps } from './ShowcaseImageCard.astro'
+
+export type ShowcaseImageProps = Props
+
+interface Props extends ShowcaseGridProps {
+  entries: ShowcaseImageCardProps[]
+}
+
+const { columns, entries } = Astro.props
+---
+
+<ShowcaseGrid {columns} minColumns={2}>
+  {entries.map((entry) => <ShowcaseImageCard {...entry} />)}
+</ShowcaseGrid>

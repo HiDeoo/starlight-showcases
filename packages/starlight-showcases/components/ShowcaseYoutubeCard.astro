@@ -1,6 +1,8 @@
 ---
 import { YouTube } from '@astro-community/astro-embed-youtube'
 
+import ShowcaseMediaCard from './ShowcaseMediaCard.astro'
+
 export type ShowcaseYoutubeCardProps = Props
 
 interface Props {
@@ -12,48 +14,6 @@ interface Props {
 const { description, href, title } = Astro.props
 ---
 
-<li class="not-content sl-flex">
-  <div class="showcase-youtube-card">
-    <YouTube id={href} />
-    <div class="showcase-youtube-infos">
-      <p class="showcase-youtube-title">{title}</p>
-      {description && <p class="showcase-youtube-description">{description}</p>}
-    </div>
-  </div>
-</li>
-
-<style>
-  .showcase-youtube-card {
-    border: 1px solid var(--sl-color-gray-5);
-    border-radius: 0.5rem;
-    box-shadow: var(--sl-shadow-sm);
-    overflow: hidden;
-    width: 100%;
-  }
-
-  .showcase-youtube-infos {
-    border-top: 1px solid var(--sl-color-gray-5);
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-    padding: 1rem;
-  }
-
-  .showcase-youtube-title {
-    color: var(--sl-color-white);
-    font-size: var(--sl-text-lg);
-    font-weight: 600;
-  }
-
-  .showcase-youtube-title {
-    color: var(--sl-color-white);
-    font-size: var(--sl-text-lg);
-    font-weight: 600;
-    line-height: var(--sl-line-height-headings);
-  }
-
-  .showcase-youtube-description {
-    color: var(--sl-color-gray-3);
-    line-height: 1.5;
-  }
-</style>
+<ShowcaseMediaCard {title} {description}>
+  <YouTube id={href} />
+</ShowcaseMediaCard>
