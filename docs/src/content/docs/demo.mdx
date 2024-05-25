@@ -7,13 +7,16 @@ import { ShowcaseCTA } from 'starlight-showcases'
 
 ## Call to action (CTA)
 
-To encourage users to contribute to your showcase page, use the [`<ShowcaseCTA>`](/components/showcasecta/) component.
+To encourage users to contribute to your showcase page, use the [`<ShowcaseCTA>`](/components/call-to-action/) component.
 
-<ShowcaseCTA>Have you built a showcase page? [Open a PR](#call-to-action-cta) to add it to the list!</ShowcaseCTA>
+<ShowcaseCTA>
+  Have you built a showcase page? [Open a PR](#call-to-action-cta) to add it to
+  the list!
+</ShowcaseCTA>
 
 ## Text
 
-To showcase text entries, use the [`<ShowcaseText>`](/components/showcasetext/) component.
+To showcase text entries, use the [`<ShowcaseText>`](/components/text/) component.
 
 import { ShowcaseText } from 'starlight-showcases'
 
@@ -37,7 +40,8 @@ import { ShowcaseText } from 'starlight-showcases'
     {
       href: 'https://github.com/HiDeoo/starlight-openapi',
       title: 'starlight-openapi',
-      description: 'Create documentation pages from OpenAPI/Swagger specifications.',
+      description:
+        'Create documentation pages from OpenAPI/Swagger specifications.',
     },
     {
       href: 'https://github.com/HiDeoo/starlight-obsidian',
@@ -54,7 +58,7 @@ import { ShowcaseText } from 'starlight-showcases'
 
 ## Images
 
-To showcase image entries, use the [`<ShowcaseImage>`](/components/showcaseimage/) component.
+To showcase image entries, use the [`<ShowcaseImage>`](/components/images/) component.
 
 import { ShowcaseImage } from 'starlight-showcases'
 
@@ -93,13 +97,13 @@ import { ShowcaseImage } from 'starlight-showcases'
   ]}
 />
 
-## Videos
+## YouTube
 
-To showcase video entries, use the [`<ShowcaseYoutube>`](/components/showcaseyoutube/) component.
+To showcase YouTube videos, use the [`<ShowcaseYouTube>`](/components/youtube/) component.
 
-import { ShowcaseYoutube } from 'starlight-showcases'
+import { ShowcaseYouTube } from 'starlight-showcases'
 
-<ShowcaseYoutube
+<ShowcaseYouTube
   entries={[
     {
       href: 'https://www.youtube.com/watch?v=5u0Ds7wzUeI',
@@ -112,9 +116,9 @@ import { ShowcaseYoutube } from 'starlight-showcases'
   ]}
 />
 
-## Tweets
+## Twitter
 
-To showcase Twitter (also known as X), use the [`<ShowcaseTwitter>`](/components/showcasetwitter/) component.
+To showcase Twitter (also known as X) posts, use the [`<ShowcaseTwitter>`](/components/twitter/) component.
 
 import { ShowcaseTwitter } from 'starlight-showcases'
 
@@ -128,7 +132,7 @@ import { ShowcaseTwitter } from 'starlight-showcases'
 
 ## Quotes
 
-To showcase quote entries, use the [`<ShowcaseQuote>`](/components/showcasequote/) component.
+To showcase quote entries, use the [`<ShowcaseQuote>`](/components/quotes/) component.
 
 import { ShowcaseQuote } from 'starlight-showcases'
 
@@ -136,12 +140,13 @@ import { ShowcaseQuote } from 'starlight-showcases'
   entries={[
     {
       quote: 'Starlight is amazing!',
-      handle: 'HiDeoo',
+      author: 'HiDeoo',
       href: 'https://github.com/HiDeoo',
     },
     {
-      quote: 'The best documentation tool!<br/><br/>Had a great experience using it for the first time.',
-      handle: 'HiDeoo',
+      quote:
+        'The best documentation tool!<br/><br/>Had a great experience using it for the first time.',
+      author: 'HiDeoo',
       href: 'https://github.com/HiDeoo',
     },
   ]}

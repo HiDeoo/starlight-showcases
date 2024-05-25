@@ -1,0 +1,69 @@
+---
+title: Call to Action (CTA)
+description: Learn how to create a call to action (CTA) in your showcase page.
+sidebar:
+  order: 1
+---
+
+The `<ShowcaseCTA>` component can be used to create a call to action to encourage users to contribute to your showcase page.
+
+## Import
+
+```js
+import { ShowcaseCTA } from 'starlight-showcases'
+```
+
+## Usage
+
+Pass the content of the CTA as children of the `<ShowcaseCTA>` component to create a call to action.
+You can nest any other Markdown content inside a CTA.
+
+```mdx title="src/content/docs/showcase.mdx"
+import { ShowcaseCTA } from 'starlight-showcases'
+
+<ShowcaseCTA>
+  Have you built a showcase page? [Open a
+  PR](https://github.com/HiDeoo/starlight-showcases) to add it to the list!
+</ShowcaseCTA>
+```
+
+The above code generates the following on the page:
+
+import { ShowcaseCTA } from 'starlight-showcases'
+
+<ShowcaseCTA>
+  Have you built a showcase page? [Open a
+  PR](https://github.com/HiDeoo/starlight-showcases) to add it to the list!
+</ShowcaseCTA>
+
+### Custom CTA title
+
+You can customize the title of the CTA by specifying it using the `title` prop.
+
+```mdx title="src/content/docs/showcase.mdx" 'title="Let us know!"'
+import { ShowcaseCTA } from 'starlight-showcases'
+
+<ShowcaseCTA title="Let us know!">
+  Have you built a showcase page? [Open a
+  PR](https://github.com/HiDeoo/starlight-showcases) to add it to the list!
+</ShowcaseCTA>
+```
+
+The above code generates the following on the page:
+
+<ShowcaseCTA title="Let us know!">
+  Have you built a showcase page? [Open a
+  PR](https://github.com/HiDeoo/starlight-showcases) to add it to the list!
+</ShowcaseCTA>
+
+## Props
+
+The `<ShowcaseCTA>` component accepts the following props:
+
+### `title`
+
+**type:** `string`  
+**default:** `'Add your own!'`
+
+The title of the CTA.
+See the [Custom CTA title](#custom-cta-title) section for an example.

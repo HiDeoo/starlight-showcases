@@ -12,6 +12,12 @@ const prettierConfig = {
         parser: 'astro',
       },
     },
+    {
+      files: ['*.md', '*.mdx'],
+      options: {
+        printWidth: 80,
+      },
+    },
   ],
   plugins: [require.resolve('prettier-plugin-astro')],
 }

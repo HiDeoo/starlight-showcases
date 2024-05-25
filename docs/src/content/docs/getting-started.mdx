@@ -5,10 +5,13 @@ description: Learn how to add author showcase pages to your documentation with t
 
 A set of [Starlight](https://starlight.astro.build) components to author showcase pages for your documentation.
 
-// TODO(HiDeoo) list source
-// TODO(HiDeoo) credits
+Different type of showcase items can be displayed, such as [text](/components/text/), [images](/components/images/), [YouTube videos](/components/youtube/), [Twitter posts](/components/twitter/), and [quotes](/components/quotes/).
 
 Check out the [demo](/demo/) for a preview of the components in action.
+
+:::note[Credits]
+All credits go to [Chris Swithinbank (@delucis)](https://github.com/delucis/) for the original idea and implementation in the [Starlight documentation](https://starlight.astro.build/resources/showcase/) and also creating the [Astro Embed](https://astro-embed.netlify.app/) library used in this project.
+:::
 
 ## Prerequisites
 
@@ -28,10 +31,17 @@ import { PackageManagers } from 'starlight-package-managers'
 You can now use any of the components in your MDX files.
 
 ```mdx title="src/content/docs/showcase.mdx"
-// TODO(HiDeoo)
-import { PackageManagers } from 'starlight-package-managers'
+import { ShowcaseText } from 'starlight-showcases'
 
-// TODO(HiDeoo)
+<ShowcaseText
+  entries={[
+    {
+      href: 'https://github.com/HiDeoo/starlight-links-validator',
+      title: 'starlight-links-validator',
+      description: 'Check for broken links in your Starlight pages.',
+    },
+  ]}
+/>
 ```
 
-For more details and examples, please refer to each component's documentation.
+For more details and examples, please refer to each component's documentation or the [demo](/demo/) for a preview of the components in action.

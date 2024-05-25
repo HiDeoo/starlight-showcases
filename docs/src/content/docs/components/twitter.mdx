@@ -1,0 +1,52 @@
+---
+title: Twitter
+description: Learn how to use the Twitter component to showcase tweets.
+sidebar:
+  order: 5
+---
+
+The `<ShowcaseTwitter>` component can be used to showcase Twitter (also known as X) posts or tweets.
+
+## Import
+
+```js
+import { ShowcaseTwitter } from 'starlight-showcases'
+```
+
+## Usage
+
+Specify a list of Twitter posts to display using the `entries` prop.
+
+```mdx title="src/content/docs/showcase.mdx"
+import { ShowcaseTwitter } from 'starlight-showcases'
+
+<ShowcaseTwitter
+  entries={[
+    'https://x.com/astrodotbuild/status/1791519480696168572',
+    'https://x.com/astrodotbuild/status/1726752143204393421',
+  ]}
+/>
+```
+
+The above code generates the following on the page:
+
+import { ShowcaseTwitter } from 'starlight-showcases'
+
+<ShowcaseTwitter
+  entries={[
+    'https://x.com/astrodotbuild/status/1791519480696168572',
+    'https://x.com/astrodotbuild/status/1726752143204393421',
+  ]}
+/>
+
+## Props
+
+The `<ShowcaseTwitter>` component accepts the following props:
+
+### `entries`
+
+**required**  
+**type:** `string[]`
+
+The list of Twitter post URLs to display.
+See the [Usage](#usage) section for an example.
