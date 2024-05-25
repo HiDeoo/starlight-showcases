@@ -1,11 +1,6 @@
 <div align="center">
-  <h1>starlight-showcases 🚧</h1>
-  <p>starlight-showcases description</p>
-  <p>
-    <a href="https://dummyimage.com/520x350/121212/cdc8be.png&text=screenshot" title="Screenshot of starlight-showcases">
-      <img alt="Screenshot of starlight-showcases" src="https://dummyimage.com/520x350/121212/cdc8be.png&text=screenshot" width="520" />
-    </a>
-  </p>
+  <h1>starlight-showcases 📸</h1>
+  <p>Set of Starlight components to author showcase pages.</p>
 </div>
 
 <div align="center">
@@ -18,12 +13,18 @@
   <br />
 </div>
 
+## Getting Started
+
+Want to get started immediately? Check out the [getting started guide](https://starlight-showcases.vercel.app/getting-started/).
+
 ## Features
 
-starlight-showcases presentation.
+A set of [Starlight](https://starlight.astro.build) components to author showcase pages for your documentation.
 
-- starlight-showcases feature 1
-- starlight-showcases feature 2
+Different type of showcase items can be displayed, such as [text](https://starlight-showcases.vercel.app/components/text/), [images](https://starlight-showcases.vercel.app/components/images/), [YouTube videos](https://starlight-showcases.vercel.app/components/youtube/), [Twitter posts](https://starlight-showcases.vercel.app/components/twitter/), and [quotes](https://starlight-showcases.vercel.app/components/quotes/).
+
+> [!NOTE]
+> All credits go to [Chris Swithinbank (@delucis)](https://github.com/delucis/) for the original idea and implementation in the [Starlight documentation](https://starlight.astro.build/resources/showcase/) and also creating the [Astro Embed](https://astro-embed.netlify.app/) library used in this project.
 
 ## License
 
