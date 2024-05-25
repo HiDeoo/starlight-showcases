@@ -14,10 +14,7 @@ export default defineConfig({
       sidebar: [
         {
           label: 'Start Here',
-          items: [
-            { label: 'Getting Started', link: '/getting-started/' },
-            { label: 'Configuration', link: '/configuration/' },
-          ],
+          items: [{ label: 'Getting Started', link: '/getting-started/' }],
         },
         {
           label: 'Guides',
@@ -27,6 +24,7 @@ export default defineConfig({
             { label: 'RSS', link: '/guides/rss/' },
           ],
         },
+        { label: 'Demo', link: '/demo/' },
       ],
       social: {
         github: 'https://github.com/HiDeoo/starlight-showcases',
