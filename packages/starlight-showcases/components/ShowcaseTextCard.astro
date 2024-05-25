@@ -1,0 +1,13 @@
+---
+import { LinkCard } from '@astrojs/starlight/components'
+
+export type ShowcaseTextCardProps = Props
+
+interface Props {
+  description?: string
+  href: string
+  title: string
+}
+---
+
+<LinkCard {...Astro.props} />

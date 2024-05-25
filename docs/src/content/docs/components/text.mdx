@@ -1,0 +1,93 @@
+---
+title: Text
+description: Learn how to use the text component to showcase text entries.
+sidebar:
+  order: 2
+---
+
+The `<ShowcaseText>` component can be used to showcase text entries which link to their respective pages.
+
+## Import
+
+```js
+import { ShowcaseText } from 'starlight-showcases'
+```
+
+## Usage
+
+Specify a list of text entries to display using the `entries` prop.
+Each entry should at least specify a title and link to the respective page while an optional description can be provided.
+
+```mdx title="src/content/docs/showcase.mdx"
+import { ShowcaseText } from 'starlight-showcases'
+
+<ShowcaseText
+  entries={[
+    {
+      href: 'https://github.com/HiDeoo/starlight-links-validator',
+      title: 'starlight-links-validator',
+      description: 'Check for broken links in your Starlight pages.',
+    },
+    {
+      href: 'https://github.com/HiDeoo/starlight-typedoc',
+      title: 'starlight-typedoc',
+      description: 'Generate Starlight pages from TypeScript using TypeDoc.',
+    },
+  ]}
+/>
+```
+
+The above code generates the following on the page:
+
+import { ShowcaseText } from 'starlight-showcases'
+
+<ShowcaseText
+  entries={[
+    {
+      href: 'https://github.com/HiDeoo/starlight-links-validator',
+      title: 'starlight-links-validator',
+      description: 'Check for broken links in your Starlight pages.',
+    },
+    {
+      href: 'https://github.com/HiDeoo/starlight-typedoc',
+      title: 'starlight-typedoc',
+      description: 'Generate Starlight pages from TypeScript using TypeDoc.',
+    },
+  ]}
+/>
+
+## Props
+
+The `<ShowcaseText>` component accepts the following props:
+
+### `entries`
+
+**required**  
+**type:** <code><a href="#entry">ShowcaseTextCardProps</a>[]</code>
+
+The list of text entries to display.
+See the [Usage](#usage) section for an example and the [entry](#entry) definition for more details.
+
+## Entry
+
+Each text entry should be an object with the following properties:
+
+### `href`
+
+**required**  
+**type:** `string`
+
+The link to the page the text entry refers to.
+
+### `title`
+
+**required**  
+**type:** `string`
+
+A title for the text entry.
+
+### `description`
+
+**type:** `string`
+
+An optional description for the text entry.

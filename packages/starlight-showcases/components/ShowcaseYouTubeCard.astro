@@ -1,0 +1,19 @@
+---
+import { YouTube } from '@astro-community/astro-embed-youtube'
+
+import ShowcaseMediaCard from './ShowcaseMediaCard.astro'
+
+export type ShowcaseYouTubeCardProps = Props
+
+interface Props {
+  description?: string
+  href: string
+  title: string
+}
+
+const { description, href, title } = Astro.props
+---
+
+<ShowcaseMediaCard {title} {description}>
+  <YouTube id={href} />
+</ShowcaseMediaCard>

@@ -1,0 +1,42 @@
+---
+title: Starlight Showcases
+description: Set of Starlight components to author showcase pages.
+head:
+  - tag: title
+    content: Starlight Showcases
+template: splash
+editUrl: false
+lastUpdated: false
+hero:
+  tagline: Set of Starlight components to author showcase pages.
+  image:
+    html: '📸'
+  actions:
+    - text: Getting Started
+      link: /getting-started/
+      icon: rocket
+      variant: primary
+    - text: Demo
+      link: /demo/
+      icon: external
+---
+
+import { Card, CardGrid } from '@astrojs/starlight/components'
+
+## Next steps
+
+<CardGrid stagger>
+  <Card title="Install the library" icon="puzzle">
+    Check the [getting started guide](/getting-started/) for installation
+    instructions.
+  </Card>
+  <Card title="Pick components" icon="rocket">
+    Select the components you want to use in your showcase pages.
+  </Card>
+  <Card title="Create showcase pages" icon="seti:image">
+    Author showcase pages using the library components.
+  </Card>
+  <Card title="Read the docs" icon="open-book">
+    Learn more in the [Starlight Showcases Docs](/getting-started/).
+  </Card>
+</CardGrid>

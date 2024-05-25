@@ -1,0 +1,89 @@
+---
+title: YouTube
+description: Learn how to use the YouTube component to showcase YouTube videos.
+sidebar:
+  order: 4
+---
+
+The `<ShowcaseYouTube>` component can be used to showcase YouTube videos.
+
+## Import
+
+```js
+import { ShowcaseYouTube } from 'starlight-showcases'
+```
+
+## Usage
+
+Specify a list of YouTube videos to display using the `entries` prop.
+Each entry should at least specify a title and link to the video while an optional description can be provided.
+
+```mdx title="src/content/docs/showcase.mdx"
+import { ShowcaseYouTube } from 'starlight-showcases'
+
+<ShowcaseYouTube
+  entries={[
+    {
+      href: 'https://www.youtube.com/watch?v=5u0Ds7wzUeI',
+      title: 'Starlight by Astro',
+    },
+    {
+      href: 'https://www.youtube.com/watch?v=TtRtkTzHVBU',
+      title: 'The Astro Community',
+    },
+  ]}
+/>
+```
+
+The above code generates the following on the page:
+
+import { ShowcaseYouTube } from 'starlight-showcases'
+
+<ShowcaseYouTube
+  entries={[
+    {
+      href: 'https://www.youtube.com/watch?v=5u0Ds7wzUeI',
+      title: 'Starlight by Astro',
+    },
+    {
+      href: 'https://www.youtube.com/watch?v=TtRtkTzHVBU',
+      title: 'The Astro Community',
+    },
+  ]}
+/>
+
+## Props
+
+The `<ShowcaseYouTube>` component accepts the following props:
+
+### `entries`
+
+**required**  
+**type:** <code><a href="#entry">ShowcaseYouTubeCardProps</a>[]</code>
+
+The list of YouTube videos to display.
+See the [Usage](#usage) section for an example and the [entry](#entry) definition for more details.
+
+## Entry
+
+Each YouTube video entry should be an object with the following properties:
+
+### `href`
+
+**required**  
+**type:** `string`
+
+The link to the YouTube video to showcase.
+
+### `title`
+
+**required**  
+**type:** `string`
+
+The title of the YouTube video.
+
+### `description`
+
+**type:** `string`
+
+An optional description for the YouTube video.

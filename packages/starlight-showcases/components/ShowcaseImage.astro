@@ -1,0 +1,27 @@
+---
+import ShowcaseImageCard, { type ShowcaseImageCardProps } from './ShowcaseImageCard.astro'
+
+export type ShowcaseImageProps = Props
+
+interface Props {
+  entries: ShowcaseImageCardProps[]
+}
+
+const { entries } = Astro.props
+---
+
+<div>
+  {entries.map((entry) => <ShowcaseImageCard {...entry} />)}
+</div>
+
+<style>
+  div {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 11rem), 1fr));
+  }
+
+  div > :global(*) {
+    margin-top: 0 !important;
+  }
+</style>

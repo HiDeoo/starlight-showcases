@@ -1,0 +1,95 @@
+---
+title: Quotes
+description: Learn how to use the quotes component to showcase quotes.
+sidebar:
+  order: 6
+---
+
+The `<ShowcaseQuote>` component can be used to showcase quotes which can link to their respective sources.
+
+## Import
+
+```js
+import { ShowcaseQuote } from 'starlight-showcases'
+```
+
+## Usage
+
+Specify a list of text entries to display using the `entries` prop.
+Each entry should at least specify the quote and author while an optional link to the source or author can be provided.
+
+```mdx title="src/content/docs/showcase.mdx"
+import { ShowcaseQuote } from 'starlight-showcases'
+
+<ShowcaseQuote
+  entries={[
+    {
+      quote: 'Starlight is amazing!',
+      author: 'HiDeoo',
+      href: 'https://github.com/HiDeoo',
+    },
+    {
+      quote:
+        'The best documentation tool!<br/><br/>Had a great experience using it for the first time.',
+      author: 'HiDeoo',
+      href: 'https://github.com/HiDeoo',
+    },
+  ]}
+/>
+```
+
+The above code generates the following on the page:
+
+import { ShowcaseQuote } from 'starlight-showcases'
+
+<ShowcaseQuote
+  entries={[
+    {
+      quote: 'Starlight is amazing!',
+      author: 'HiDeoo',
+      href: 'https://github.com/HiDeoo',
+    },
+    {
+      quote:
+        'The best documentation tool!<br/><br/>Had a great experience using it for the first time.',
+      author: 'HiDeoo',
+      href: 'https://github.com/HiDeoo',
+    },
+  ]}
+/>
+
+## Props
+
+The `<ShowcaseQuote>` component accepts the following props:
+
+### `entries`
+
+**required**  
+**type:** <code><a href="#entry">ShowcaseQuoteCardProps</a>[]</code>
+
+The list of quotes to display.
+See the [Usage](#usage) section for an example and the [entry](#entry) definition for more details.
+
+## Entry
+
+Each text entry should be an object with the following properties:
+
+### `quote`
+
+**required**  
+**type:** `string`
+
+The quote to display in the showcase.
+
+### `author`
+
+**required**  
+**type:** `string`
+
+The author of the quote.
+
+### `href`
+
+**type:** `string`
+
+An optional link to the source or author of the quote.

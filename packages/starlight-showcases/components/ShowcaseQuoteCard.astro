@@ -1,0 +1,44 @@
+---
+export type ShowcaseQuoteCardProps = Props
+
+interface Props {
+  author: string
+  quote: string
+  href?: string
+}
+
+const { author, quote, href } = Astro.props
+---
+
+<div class="not-content sl-flex">
+  <div class="starlight-showcases-quote-card">
+    <blockquote cite={href} set:html={quote} />
+    <div class="starlight-showcases-quote-infos">{href ? <a {href}>{author}</a> : author}</div>
+  </div>
+</div>
+
+<style>
+  .starlight-showcases-quote-card {
+    border: 1px solid var(--sl-color-gray-5);
+    border-radius: 0.5rem;
+    box-shadow: var(--sl-shadow-sm);
+    width: 100%;
+  }
+
+  blockquote {
+    color: var(--sl-color-white);
+    padding: 1rem;
+  }
+
+  .starlight-showcases-quote-infos {
+    border-top: 1px solid var(--sl-color-gray-5);
+    color: var(--sl-color-gray-3);
+    font-weight: 600;
+    line-height: 1.5;
+    padding: 1rem;
+  }
+
+  .starlight-showcases-quote-infos a {
+    color: var(--sl-color-gray-3);
+  }
+</style>

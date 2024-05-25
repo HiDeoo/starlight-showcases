@@ -1,0 +1,47 @@
+---
+title: Getting Started
+description: Learn how to add author showcase pages to your documentation with the Starlight Showcases component library.
+---
+
+A set of [Starlight](https://starlight.astro.build) components to author showcase pages for your documentation.
+
+Different type of showcase items can be displayed, such as [text](/components/text/), [images](/components/images/), [YouTube videos](/components/youtube/), [Twitter posts](/components/twitter/), and [quotes](/components/quotes/).
+
+Check out the [demo](/demo/) for a preview of the components in action.
+
+:::note[Credits]
+All credits go to [Chris Swithinbank (@delucis)](https://github.com/delucis/) for the original idea and implementation in the [Starlight documentation](https://starlight.astro.build/resources/showcase/) and also creating the [Astro Embed](https://astro-embed.netlify.app/) library used in this project.
+:::
+
+## Prerequisites
+
+You will need to have a Starlight website set up.
+If you don't have one yet, you can follow the ["Getting Started"](https://starlight.astro.build/getting-started) guide in the Starlight docs to create one.
+
+## Installation
+
+Install the Starlight Showcases component library using your favorite package manager:
+
+import { PackageManagers } from 'starlight-package-managers'
+
+<PackageManagers pkg="starlight-showcases" />
+
+## Basic Usage
+
+You can now use any of the components in your MDX files.
+
+```mdx title="src/content/docs/showcase.mdx"
+import { ShowcaseText } from 'starlight-showcases'
+
+<ShowcaseText
+  entries={[
+    {
+      href: 'https://github.com/HiDeoo/starlight-links-validator',
+      title: 'starlight-links-validator',
+      description: 'Check for broken links in your Starlight pages.',
+    },
+  ]}
+/>
+```
+
+For more details and examples, please refer to each component's documentation or the [demo](/demo/) for a preview of the components in action.

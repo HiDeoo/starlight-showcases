@@ -1,0 +1,153 @@
+---
+title: Demo
+description: Discover the Starlight Showcases components in action.
+---
+
+import { ShowcaseCTA } from 'starlight-showcases'
+
+## Call to action (CTA)
+
+To encourage users to contribute to your showcase page, use the [`<ShowcaseCTA>`](/components/call-to-action/) component.
+
+<ShowcaseCTA>
+  Have you built a showcase page? [Open a PR](#call-to-action-cta) to add it to
+  the list!
+</ShowcaseCTA>
+
+## Text
+
+To showcase text entries, use the [`<ShowcaseText>`](/components/text/) component.
+
+import { ShowcaseText } from 'starlight-showcases'
+
+<ShowcaseText
+  entries={[
+    {
+      href: 'https://github.com/HiDeoo/starlight-links-validator',
+      title: 'starlight-links-validator',
+      description: 'Check for broken links in your Starlight pages.',
+    },
+    {
+      href: 'https://github.com/HiDeoo/starlight-typedoc',
+      title: 'starlight-typedoc',
+      description: 'Generate Starlight pages from TypeScript using TypeDoc.',
+    },
+    {
+      href: 'https://github.com/HiDeoo/starlight-blog',
+      title: 'starlight-blog',
+      description: 'Add a blog to your Starlight documentation site.',
+    },
+    {
+      href: 'https://github.com/HiDeoo/starlight-openapi',
+      title: 'starlight-openapi',
+      description:
+        'Create documentation pages from OpenAPI/Swagger specifications.',
+    },
+    {
+      href: 'https://github.com/HiDeoo/starlight-obsidian',
+      title: 'starlight-obsidian',
+      description: 'Publish Obsidian vaults in your Starlight site.',
+    },
+    {
+      href: 'https://github.com/HiDeoo/starlight-image-zoom',
+      title: 'starlight-image-zoom',
+      description: 'Add zoom capabilities to your documentation images.',
+    },
+  ]}
+/>
+
+## Images
+
+To showcase image entries, use the [`<ShowcaseImage>`](/components/images/) component.
+
+import { ShowcaseImage } from 'starlight-showcases'
+
+<ShowcaseImage
+  entries={[
+    {
+      thumbnail: import('../../assets/demo/starlight-links-validator.png'),
+      href: 'https://github.com/HiDeoo/starlight-links-validator',
+      title: 'starlight-links-validator',
+    },
+    {
+      thumbnail: import('../../assets/demo/starlight-typedoc.png'),
+      href: 'https://github.com/HiDeoo/starlight-typedoc',
+      title: 'starlight-typedoc',
+    },
+    {
+      thumbnail: import('../../assets/demo/starlight-blog.png'),
+      href: 'https://github.com/HiDeoo/starlight-blog',
+      title: 'starlight-blog',
+    },
+    {
+      thumbnail: import('../../assets/demo/starlight-openapi.png'),
+      href: 'https://github.com/HiDeoo/starlight-openapi',
+      title: 'starlight-openapi',
+    },
+    {
+      thumbnail: import('../../assets/demo/starlight-obsidian.png'),
+      href: 'https://github.com/HiDeoo/starlight-obsidian',
+      title: 'starlight-obsidian',
+    },
+    {
+      thumbnail: import('../../assets/demo/starlight-image-zoom.png'),
+      href: 'https://github.com/HiDeoo/starlight-image-zoom',
+      title: 'starlight-image-zoom',
+    },
+  ]}
+/>
+
+## YouTube
+
+To showcase YouTube videos, use the [`<ShowcaseYouTube>`](/components/youtube/) component.
+
+import { ShowcaseYouTube } from 'starlight-showcases'
+
+<ShowcaseYouTube
+  entries={[
+    {
+      href: 'https://www.youtube.com/watch?v=5u0Ds7wzUeI',
+      title: 'Starlight by Astro',
+    },
+    {
+      href: 'https://www.youtube.com/watch?v=TtRtkTzHVBU',
+      title: 'The Astro Community',
+    },
+  ]}
+/>
+
+## Twitter
+
+To showcase Twitter (also known as X) posts, use the [`<ShowcaseTwitter>`](/components/twitter/) component.
+
+import { ShowcaseTwitter } from 'starlight-showcases'
+
+<ShowcaseTwitter
+  entries={[
+    'https://x.com/astrodotbuild/status/1791519480696168572',
+    'https://x.com/astrodotbuild/status/1726752143204393421',
+    'https://x.com/astrodotbuild/status/1708931508851847417',
+  ]}
+/>
+
+## Quotes
+
+To showcase quote entries, use the [`<ShowcaseQuote>`](/components/quotes/) component.
+
+import { ShowcaseQuote } from 'starlight-showcases'
+
+<ShowcaseQuote
+  entries={[
+    {
+      quote: 'Starlight is amazing!',
+      author: 'HiDeoo',
+      href: 'https://github.com/HiDeoo',
+    },
+    {
+      quote:
+        'The best documentation tool!<br/><br/>Had a great experience using it for the first time.',
+      author: 'HiDeoo',
+      href: 'https://github.com/HiDeoo',
+    },
+  ]}
+/>
