@@ -1,9 +1,6 @@
 import starlight from '@astrojs/starlight'
 import { defineConfig } from 'astro/config'
 
-// TODO(HiDeoo) favicon
-
-// TODO(HiDeoo)
 export default defineConfig({
   integrations: [
     starlight({
