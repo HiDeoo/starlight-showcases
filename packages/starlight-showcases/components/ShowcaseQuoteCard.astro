@@ -2,18 +2,18 @@
 export type ShowcaseQuoteCardProps = Props
 
 interface Props {
+  author: string
   quote: string
-  handle: string
   href?: string
 }
 
-const { quote, handle, href } = Astro.props
+const { author, quote, href } = Astro.props
 ---
 
 <div class="not-content sl-flex">
   <div class="starlight-showcases-quote-card">
     <blockquote cite={href} set:html={quote} />
-    <div class="starlight-showcases-quote-infos">{href ? <a {href}>{handle}</a> : handle}</div>
+    <div class="starlight-showcases-quote-infos">{href ? <a {href}>{author}</a> : author}</div>
   </div>
 </div>
 
@@ -26,6 +26,7 @@ const { quote, handle, href } = Astro.props
   }
 
   blockquote {
+    color: var(--sl-color-white);
     padding: 1rem;
   }
 
