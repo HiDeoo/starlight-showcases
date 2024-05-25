@@ -1,4 +1,5 @@
 export { default as ShowcaseText, type ShowcaseTextProps } from './components/ShowcaseText.astro'
 export { default as ShowcaseImage, type ShowcaseImageProps } from './components/ShowcaseImage.astro'
+export { default as ShowcaseQuote, type ShowcaseQuoteProps } from './components/ShowcaseQuote.astro'
 export { default as ShowcaseYoutube, type ShowcaseYoutubeProps } from './components/ShowcaseYoutube.astro'
 export { default as ShowcaseTwitter, type ShowcaseTwitterProps } from './components/ShowcaseTwitter.astro'

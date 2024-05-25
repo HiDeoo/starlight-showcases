@@ -15,9 +15,9 @@ const Element = href ? 'a' : 'div'
     <div class="starlight-showcases-media-asset">
       <slot />
     </div>
-    <div class="starlight-showcases-infos sl-flex">
-      <p class="starlight-showcases-title">{title}</p>
-      {description && <p class="starlight-showcases-description">{description}</p>}
+    <div class="starlight-showcases-media-infos sl-flex">
+      <p class="starlight-showcases-media-title">{title}</p>
+      {description && <p class="starlight-showcases-media-description">{description}</p>}
     </div>
   </Element>
 </div>
@@ -45,21 +45,21 @@ const Element = href ? 'a' : 'div'
     object-fit: cover;
   }
 
-  .starlight-showcases-infos {
+  .starlight-showcases-media-infos {
     border-top: 1px solid var(--sl-color-gray-5);
     flex-direction: column;
     gap: 0.5rem;
     padding: 1rem;
   }
 
-  .starlight-showcases-title {
+  .starlight-showcases-media-title {
     color: var(--sl-color-white);
     font-size: var(--sl-text-lg);
     font-weight: 600;
     line-height: var(--sl-line-height-headings);
   }
 
-  .starlight-showcases-description {
+  .starlight-showcases-media-description {
     color: var(--sl-color-gray-3);
     line-height: 1.5;
   }
