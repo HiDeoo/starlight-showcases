@@ -20,28 +20,33 @@ If you don't have one yet, you can follow the ["Getting Started"](https://starli
 
 ## Installation
 
-Install the Starlight Showcases component library using your favorite package manager:
+import { Steps } from '@astrojs/starlight/components'
+import { PackageManagers } from '@hideoo/starlight-plugins-docs-components'
 
-import { PackageManagers } from 'starlight-package-managers'
+<Steps>
 
-<PackageManagers pkg="starlight-showcases" />
+1. Install the Starlight Showcases component library using your favorite package manager:
 
-## Basic Usage
+   <PackageManagers pkg="starlight-showcases" />
 
-You can now use any of the components in your MDX files.
+2. Use any of the components in your MDX files.
 
-```mdx title="src/content/docs/showcase.mdx"
-import { ShowcaseText } from 'starlight-showcases'
+   ```mdx title="src/content/docs/showcase.mdx"
+   import { ShowcaseText } from 'starlight-showcases'
 
-<ShowcaseText
-  entries={[
-    {
-      href: 'https://github.com/HiDeoo/starlight-links-validator',
-      title: 'starlight-links-validator',
-      description: 'Check for broken links in your Starlight pages.',
-    },
-  ]}
-/>
-```
+   <ShowcaseText
+     entries={[
+       {
+         href: 'https://github.com/HiDeoo/starlight-links-validator',
+         title: 'starlight-links-validator',
+         description: 'Check for broken links in your Starlight pages.',
+       },
+     ]}
+   />
+   ```
+
+3. [Start the development server](https://starlight.astro.build/getting-started/#start-the-development-server) to preview the components.
+
+</Steps>
 
 For more details and examples, see the components' documentation in the sidebar or the [demo](/demo/) page for a preview of all the components in action.
