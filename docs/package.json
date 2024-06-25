@@ -29,7 +29,8 @@
     "components",
     "showcase",
     "documentation",
-    "astro"
+    "astro",
+    "astro-component"
   ],
   "homepage": "https://github.com/HiDeoo/starlight-showcases",
   "repository": {
