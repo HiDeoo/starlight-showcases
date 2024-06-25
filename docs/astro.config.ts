@@ -17,6 +17,10 @@ export default defineConfig({
           label: 'Components',
           autogenerate: { directory: 'components' },
         },
+        {
+          label: 'Resources',
+          items: [{ label: 'Plugins and Tools', link: '/resources/starlight/' }],
+        },
         { label: 'Demo', link: '/demo/' },
       ],
       social: {
