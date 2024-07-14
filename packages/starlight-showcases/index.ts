@@ -4,3 +4,4 @@ export { default as ShowcaseImage, type ShowcaseImageProps } from './components/
 export { default as ShowcaseQuote, type ShowcaseQuoteProps } from './components/ShowcaseQuote.astro'
 export { default as ShowcaseYouTube, type ShowcaseYouTubeProps } from './components/ShowcaseYouTube.astro'
 export { default as ShowcaseTwitter, type ShowcaseTwitterProps } from './components/ShowcaseTwitter.astro'
+export { default as ShowcaseGitHub, type ShowcaseGitHubProps } from './components/ShowcaseGitHub.astro'

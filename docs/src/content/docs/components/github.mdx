@@ -1,0 +1,98 @@
+---
+title: GitHub
+description: Learn how to use the GitHub component to showcase GitHub repositories and users.
+sidebar:
+  order: 7
+---
+
+The `<ShowcaseGitHub>` component can be used to showcase GitHub repositories or users.
+
+## Import
+
+```js
+import { ShowcaseGitHub } from 'starlight-showcases'
+```
+
+## Usage
+
+### GitHub Repository
+
+Specify the GitHub repository to display using the `avatar`, `description`, `env`, `repo`.
+
+```mdx title="src/content/docs/showcase.mdx"
+import { ShowcaseGitHub } from 'starlight-showcases'
+
+<ShowcaseGitHub
+  avatar="494699"
+  description="Discover the Starlight Showcases components in action."
+  env="HiDeoo"
+  repo="starlight-showcases"
+/>
+```
+
+The above code generates the following on the page:
+
+import { ShowcaseGitHub } from 'starlight-showcases'
+
+<ShowcaseGitHub
+  avatar="494699"
+  description="Discover the Starlight Showcases components in action."
+  env="HiDeoo"
+  repo="starlight-showcases"
+/>
+
+### GitHub User
+
+Specify the GitHub user to display using the `avatar`, `description`, `user`.
+
+```mdx title="src/content/docs/showcase.mdx"
+import { ShowcaseGitHub } from 'starlight-showcases'
+
+<ShowcaseGitHub
+  avatar="10137"
+  description="Hi, I'm @ghost! I take the place of user accounts that have been deleted. :ghost:"
+  user="ghost"
+/>
+```
+
+The above code generates the following on the page:
+
+<ShowcaseGitHub
+  avatar="10137"
+  description="Hi, I'm @ghost! I take the place of user accounts that have been deleted. :ghost:"
+  user="ghost"
+/>
+
+## Props
+
+The `<ShowcaseGitHub>` component accepts the following props:
+
+### `avatar`
+
+**type:** `string`
+
+The GitHub user avatar ID.
+
+### `description`
+
+**type:** `string`
+
+The GitHub repository or user description.
+
+### `env`
+
+**type:** `string`
+
+The GitHub environment (user or organization).
+
+### `repo`
+
+**type:** `string`
+
+The GitHub repository name.
+
+### `user`
+
+**type:** `string`
+
+The GitHub user name.

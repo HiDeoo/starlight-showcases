@@ -1,0 +1,130 @@
+---
+export type ShowcaseGitHubProps = Props
+
+interface Props {
+  avatar?: string
+  description?: string
+  env?: string
+  repo?: string
+  user?: string
+}
+
+const { avatar, description, env, repo, user } = Astro.props
+---
+
+<div class="not-content sl-flex">
+  <div class="starlight-showcases-github-card">
+    <div class="starlight-showcases-github-card-body">
+      <div class="starlight-showcases-github-card-body-header">
+        <h2 class="starlight-showcases-github-card-title">
+          {
+            env && repo && (
+              <a class="starlight-showcases-github-card-title-link" href={`https://github.com/${env}/${repo}`}>
+                <span class="starlight-showcases-github-card-title-link-env">{env}/</span>
+                <br />
+                {repo}
+              </a>
+            )
+          }
+          {
+            user && (
+              <a class="starlight-showcases-github-card-title-link" href={`https://github.com/${user}`}>
+                {user}
+              </a>
+            )
+          }
+        </h2>
+        {
+          avatar && (
+            <img
+              class="starlight-showcases-github-card-avatar"
+              src={`https://avatars.githubusercontent.com/u/${avatar}?v=4`}
+              aria-hidden="true"
+              alt=""
+            />
+          )
+        }
+      </div>
+      {description && <p>{description}</p>}
+    </div>
+  </div>
+</div>
+
+<style>
+  .starlight-showcases-github-card {
+    position: relative;
+    border: none;
+    border-radius: 0.5rem;
+    box-shadow: var(--sl-shadow-sm);
+    width: 100%;
+  }
+
+  @media screen and (min-width: 480px) {
+    .starlight-showcases-github-card {
+      border: 1px solid var(--sl-color-gray-5);
+    }
+  }
+
+  .starlight-showcases-github-card-body {
+    padding: 0;
+    list-style-type: none;
+  }
+
+  @media screen and (min-width: 480px) {
+    .starlight-showcases-github-card-body {
+      padding: 2rem;
+    }
+  }
+
+  .starlight-showcases-github-card-body-header {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .starlight-showcases-github-card-title {
+    font-size: var(--sl-text-h3);
+    line-height: var(--sl-line-height-headings);
+    color: var(--sl-color-white);
+  }
+
+  .starlight-showcases-github-card-title-link {
+    font-weight: bold;
+    word-break: break-all;
+    color: var(--sl-color-white);
+    text-decoration: inherit;
+  }
+
+  .starlight-showcases-github-card-title-link:after {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    content: '';
+  }
+
+  .starlight-showcases-github-card-title-link:hover {
+    text-decoration: underline;
+  }
+
+  .starlight-showcases-github-card-title-link-env {
+    max-width: 50px;
+    font-weight: normal;
+  }
+
+  .starlight-showcases-github-card-title-link-repo {
+    font-weight: bold;
+    max-width: 50px;
+  }
+
+  .starlight-showcases-github-card-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 0.75rem;
+  }
+
+  @media screen and (min-width: 480px) {
+    .starlight-showcases-github-card-avatar {
+      width: 60px;
+      height: 60px;
+    }
+  }
+</style>
