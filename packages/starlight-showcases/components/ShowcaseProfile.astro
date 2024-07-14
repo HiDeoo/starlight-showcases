@@ -1,0 +1,22 @@
+---
+import ShowcaseProfileCard, { type ShowcaseProfileCardProps } from './ShowcaseProfileCard.astro'
+
+export type ShowcaseProfileProps = Props
+
+interface Props {
+  entries: ShowcaseProfileCardProps[]
+}
+
+const { entries } = Astro.props
+---
+
+<div class="not-content sl-flex">
+  {entries.map((entry) => <ShowcaseProfileCard {...entry} />)}
+</div>
+
+<style>
+  div {
+    flex-direction: column;
+    gap: 1rem;
+  }
+</style>

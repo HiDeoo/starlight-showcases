@@ -151,3 +151,34 @@ import { ShowcaseQuote } from 'starlight-showcases'
     },
   ]}
 />
+
+## Profile
+
+To showcase profiles, use the [`<ShowcaseProfile>`](/components/profile/) component.
+
+import { ShowcaseProfile } from 'starlight-showcases'
+
+<ShowcaseProfile
+  entries={[
+    {
+      href: 'https://starlight.astro.build/',
+      name: 'Starlight',
+      description: 'Starlight is a documentation generator for Astro.',
+      picture:
+        'https://starlight.astro.build/_astro/hero-star.CRrHICv4_1oHYTB.webp',
+    },
+    {
+      href: 'https://github.com/HiDeoo/starlight-showcases',
+      name: '<span style="font-weight: normal">HiDeoo/</span><br>starlight-showcases',
+      description: 'Discover the Starlight Showcases components in action.',
+      picture: 'https://avatars.githubusercontent.com/u/494699?v=4',
+    },
+    {
+      href: 'https://github.com/ghost',
+      name: 'ghost',
+      description:
+        "Hi, I'm @ghost! I take the place of user accounts that have been deleted. :ghost:",
+      picture: 'https://avatars.githubusercontent.com/u/10137?v=4',
+    },
+  ]}
+/>

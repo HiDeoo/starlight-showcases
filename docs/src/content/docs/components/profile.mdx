@@ -1,0 +1,145 @@
+---
+title: Profile
+description: Learn how to use the Profile component to showcase profile cards.
+sidebar:
+  order: 7
+---
+
+The `<ShowcaseProfile>` component can be used to showcase profiles.
+
+## Import
+
+```js
+import { ShowcaseProfile } from 'starlight-showcases'
+```
+
+## Usage
+
+```mdx title="src/content/docs/showcase.mdx"
+import { ShowcaseProfile } from 'starlight-showcases'
+
+<ShowcaseProfile
+  entries={[
+    {
+      description: 'Starlight is a documentation generator for Astro.',
+      href: 'https://starlight.astro.build/',
+      name: 'Starlight',
+      picture:
+        'https://starlight.astro.build/_astro/hero-star.CRrHICv4_1oHYTB.webp',
+    },
+  ]}
+/>
+```
+
+The above code generates the following on the page:
+
+import { ShowcaseProfile } from 'starlight-showcases'
+
+<ShowcaseProfile
+  entries={[
+    {
+      description: 'Starlight is a documentation generator for Astro.',
+      href: 'https://starlight.astro.build/',
+      name: 'Starlight',
+      picture:
+        'https://starlight.astro.build/_astro/hero-star.CRrHICv4_1oHYTB.webp',
+    },
+  ]}
+/>
+
+### GitHub Repositories
+
+To showcase GitHub repositories.
+
+```mdx title="src/content/docs/showcase.mdx"
+import { ShowcaseProfile } from 'starlight-showcases'
+
+<ShowcaseProfile
+  entries={[
+    {
+      href: 'https://github.com/HiDeoo/starlight-showcases',
+      name: '<span style="font-weight: normal">HiDeoo/</span><br>starlight-showcases',
+      description: 'Discover the Starlight Showcases components in action.',
+      picture: 'https://avatars.githubusercontent.com/u/494699?v=4',
+    },
+  ]}
+/>
+```
+
+The above code generates the following on the page:
+
+<ShowcaseProfile
+  entries={[
+    {
+      href: 'https://github.com/HiDeoo/starlight-showcases',
+      name: '<span style="font-weight: normal">HiDeoo/</span><br>starlight-showcases',
+      description: 'Discover the Starlight Showcases components in action.',
+      picture: 'https://avatars.githubusercontent.com/u/494699?v=4',
+    },
+  ]}
+/>
+
+### GitHub Users
+
+To showcase GitHub user profiles.
+
+```mdx title="src/content/docs/showcase.mdx"
+import { ShowcaseProfile } from 'starlight-showcases'
+
+<ShowcaseProfile
+  entries={[
+    {
+      href: 'https://github.com/ghost',
+      name: 'ghost',
+      description:
+        "Hi, I'm @ghost! I take the place of user accounts that have been deleted. :ghost:",
+      picture: 'https://avatars.githubusercontent.com/u/10137?v=4',
+    },
+  ]}
+/>
+```
+
+The above code generates the following on the page:
+
+<ShowcaseProfile
+  entries={[
+    {
+      href: 'https://github.com/ghost',
+      name: 'ghost',
+      description:
+        "Hi, I'm @ghost! I take the place of user accounts that have been deleted. :ghost:",
+      picture: 'https://avatars.githubusercontent.com/u/10137?v=4',
+    },
+  ]}
+/>
+
+## Props
+
+The `<ShowcaseProfile>` component accepts the following props:
+
+### `description`
+
+**type:** `string`
+
+The profile description.
+
+### `href`
+
+**required**
+**type:** `string`
+
+The link to the profile.
+
+### `name`
+
+**required**
+**type:** `string`
+
+The profile name.
+
+### `picture`
+
+**required**
+**type:** `string`
+
+The link to the profile picture.
