@@ -1,26 +1,26 @@
 ---
-import type { HTMLAttributes } from 'astro/types'
 import { Image } from 'astro:assets'
 
 export type ShowcaseProfileCardProps = Props
 
-interface Props extends Omit<HTMLAttributes<'a'>, 'title'> {
+interface Props {
   description?: string
+  href: string
   name: string
   picture: string
 }
 
-const { name, description, picture, ...attributes } = Astro.props
+const { name, description, picture, href } = Astro.props
 ---
 
 <div class="starlight-showcases-profile-card">
-  <span class="sl-flex stack">
-    <a {...attributes}>
-      <span class="title" set:html={name} />
+  <span class="sl-flex starlight-showcases-profile-content">
+    <a {href}>
+      <span class="starlight-showcases-profile-name" set:html={name} />
     </a>
-    {description && <span class="description" set:html={description} />}
+    {description && <span class="starlight-showcases-profile-description" set:html={description} />}
   </span>
-  <Image class="starlight-showcases-profile-card-avatar" src={picture} alt="" width="50" height="50" />
+  <Image class="starlight-showcases-profile-picture" src={picture} alt="" width="50" height="50" />
 </div>
 
 <style>
@@ -47,27 +47,25 @@ const { name, description, picture, ...attributes } = Astro.props
     inset: 0;
   }
 
-  .stack {
+  .starlight-showcases-profile-content {
     flex-direction: column;
     gap: 0.5rem;
   }
 
-  .title {
+  .starlight-showcases-profile-name {
     color: var(--sl-color-white);
     font-weight: 600;
     font-size: var(--sl-text-lg);
   }
 
-  .description {
+  .starlight-showcases-profile-description {
     color: var(--sl-color-gray-3);
     line-height: 1.5;
   }
 
-  .starlight-showcases-profile-card-avatar {
+  .starlight-showcases-profile-picture {
     border-radius: 0.5rem;
   }
-
-  /* Hover state */
 
   .starlight-showcases-profile-card:hover {
     background: var(--sl-color-gray-7, var(--sl-color-gray-6));
