@@ -29,5 +29,8 @@ export default defineConfig({
       title: 'Starlight Showcases',
     }),
   ],
+  image: {
+    domains: ['avatars.githubusercontent.com'],
+  },
   site: 'https://starlight-showcases.vercel.app',
 })
