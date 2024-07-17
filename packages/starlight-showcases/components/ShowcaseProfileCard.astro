@@ -20,7 +20,7 @@ const { name, description, picture, ...attributes } = Astro.props
     </a>
     {description && <span class="description" set:html={description} />}
   </span>
-  <Image class="starlight-showcases-github-card-avatar" src={picture} alt="" width="50" height="50" />
+  <Image class="starlight-showcases-profile-card-avatar" src={picture} alt="" width="50" height="50" />
 </div>
 
 <style>
@@ -63,7 +63,7 @@ const { name, description, picture, ...attributes } = Astro.props
     line-height: 1.5;
   }
 
-  .starlight-showcases-github-card-avatar {
+  .starlight-showcases-profile-card-avatar {
     border-radius: 0.5rem;
   }
 
