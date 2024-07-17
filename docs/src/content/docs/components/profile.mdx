@@ -140,6 +140,10 @@ The profile name.
 ### `picture`
 
 **required**
-**type:** `string`
+**type:** `Promise<ImageImport> | string`
 
-The link to the profile picture.
+The picture representing the profile.
+The image should be one of the following:
+
+- A dynamic import using the relative path to the image file stored in your project `src/` directory, e.g. `import('../../assets/showcase/profile.png')`.
+- An external URL to the image.
