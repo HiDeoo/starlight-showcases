@@ -1,0 +1,115 @@
+---
+title: Profiles
+description: Learn how to use the profile component to showcase profiles including a name, description, picture and link.
+sidebar:
+  order: 7
+---
+
+The `<ShowcaseProfile>` component can be used to showcase profiles like GitHub users, repositories or any other profile.
+
+## Import
+
+```js
+import { ShowcaseProfile } from 'starlight-showcases'
+```
+
+## Usage
+
+Specify a list of profile entries to display using the `entries` prop.
+Each entry should at least specify a name, picture and link to the respective page while an optional description can be provided.
+
+```mdx title="src/content/docs/showcase.mdx"
+import { ShowcaseProfile } from 'starlight-showcases'
+
+<ShowcaseProfile
+  entries={[
+    {
+      name: 'Houston',
+      picture: 'https://avatars.githubusercontent.com/u/108291165?v=4',
+      href: 'https://github.com/astrobot-houston',
+      description:
+        "beep boop. I'm a bot that helps out the Astro organization.",
+    },
+    {
+      name: 'withastro/starlight',
+      picture: import('../../../assets/demo/starlight-logo.png'),
+      href: 'https://github.com/withastro/starlight/',
+      description:
+        '🌟 Build beautiful, accessible, high-performance documentation websites with Astro',
+    },
+  ]}
+/>
+```
+
+The above code generates the following on the page:
+
+import { ShowcaseProfile } from 'starlight-showcases'
+
+<ShowcaseProfile
+  entries={[
+    {
+      name: 'Houston',
+      picture: 'https://avatars.githubusercontent.com/u/108291165?v=4',
+      href: 'https://github.com/astrobot-houston',
+      description:
+        "beep boop. I'm a bot that helps out the Astro organization.",
+    },
+    {
+      name: 'withastro/starlight',
+      picture: import('../../../assets/demo/starlight-logo.png'),
+      href: 'https://github.com/withastro/starlight/',
+      description:
+        '🌟 Build beautiful, accessible, high-performance documentation websites with Astro',
+    },
+  ]}
+/>
+
+## Props
+
+The `<ShowcaseProfile>` component accepts the following props:
+
+### `entries`
+
+**required**  
+**type:** <code><a href="#entry">ShowcaseProfileCardProps</a>[]</code>
+
+The list of profile entries to display.
+See the [Usage](#usage) section for an example and the [entry](#entry) definition for more details.
+
+## Entry
+
+Each profile entry should be an object with the following properties:
+
+### `name`
+
+**required**  
+**type:** `string`
+
+The name of the profile to display.
+The value can include HTML for formatting and additional styling.
+
+### `href`
+
+**required**  
+**type:** `string`
+
+The link to the profile page the profile represents.
+
+### `picture`
+
+**required**  
+**type:** `Promise<ImageImport> | string`
+
+The picture representing the profile.
+The image should be one of the following:
+
+- A dynamic import using the relative path to the image file stored in your project `src/` directory, e.g. `import('../../assets/showcase/profile.png')`.
+- An external URL to the image.
+
+When using remote images, check out the [“Authorizing remote images”](https://docs.astro.build/en/guides/images/#authorizing-remote-images) guide to enable image optimization.
+
+### `description`
+
+**type:** `string`
+
+An optional description for the profile entry.

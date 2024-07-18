@@ -1,0 +1,84 @@
+---
+import type { ImageMetadata } from 'astro'
+import { Image } from 'astro:assets'
+
+export type ShowcaseProfileCardProps = Props
+
+interface Props {
+  description?: string
+  href: string
+  name: string
+  picture: Promise<{ default: ImageMetadata }> | string
+}
+
+const { name, description, picture, href } = Astro.props
+
+let src: string | ImageMetadata
+
+if (typeof picture === 'string') {
+  src = picture
+} else {
+  const imageImport = await picture
+  src = imageImport.default
+}
+---
+
+<div class="starlight-showcases-profile-card">
+  <span class="sl-flex starlight-showcases-profile-content">
+    <a {href}>
+      <span class="starlight-showcases-profile-name" set:html={name} />
+    </a>
+    {description && <span class="starlight-showcases-profile-description" set:html={description} />}
+  </span>
+  <Image class="starlight-showcases-profile-picture" {src} alt="" width="50" height="50" />
+</div>
+
+<style>
+  .starlight-showcases-profile-card {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 0.5rem;
+    border: 1px solid var(--sl-color-gray-5);
+    border-radius: 0.5rem;
+    padding: 1rem;
+    box-shadow: var(--sl-shadow-sm);
+    position: relative;
+  }
+
+  a {
+    text-decoration: none;
+    line-height: var(--sl-line-height-headings);
+  }
+
+  /* a11y fix (see https://github.com/withastro/starlight/issues/487) */
+  a::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+  }
+
+  .starlight-showcases-profile-content {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .starlight-showcases-profile-name {
+    color: var(--sl-color-white);
+    font-weight: 600;
+    font-size: var(--sl-text-lg);
+  }
+
+  .starlight-showcases-profile-description {
+    color: var(--sl-color-gray-3);
+    line-height: 1.5;
+  }
+
+  .starlight-showcases-profile-picture {
+    border-radius: 0.4375rem;
+  }
+
+  .starlight-showcases-profile-card:hover {
+    background: var(--sl-color-gray-7, var(--sl-color-gray-6));
+    border-color: var(--sl-color-gray-2);
+  }
+</style>

@@ -151,3 +151,28 @@ import { ShowcaseQuote } from 'starlight-showcases'
     },
   ]}
 />
+
+## Profiles
+
+To showcase profiles, use the [`<ShowcaseProfile>`](/components/profiles/) component.
+
+import { ShowcaseProfile } from 'starlight-showcases'
+
+<ShowcaseProfile
+  entries={[
+    {
+      name: 'Houston',
+      picture: 'https://avatars.githubusercontent.com/u/108291165?v=4',
+      href: 'https://github.com/astrobot-houston',
+      description:
+        "beep boop. I'm a bot that helps out the Astro organization.",
+    },
+    {
+      name: 'withastro/starlight',
+      picture: import('../../assets/demo/starlight-logo.png'),
+      href: 'https://github.com/withastro/starlight/',
+      description:
+        '🌟 Build beautiful, accessible, high-performance documentation websites with Astro',
+    },
+  ]}
+/>
