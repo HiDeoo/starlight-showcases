@@ -13,7 +13,7 @@
   },
   "dependencies": {
     "@astrojs/starlight": "^0.30.1",
-    "@hideoo/starlight-plugins-docs-components": "^0.2.2",
+    "@hideoo/starlight-plugins-docs-components": "^0.3.0",
     "astro": "^5.0.5",
     "sharp": "^0.33.5",
     "starlight-showcases": "workspace:*"

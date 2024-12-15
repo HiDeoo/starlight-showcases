@@ -51,8 +51,8 @@ importers:
         specifier: ^0.30.1
         version: 0.30.1(astro@5.0.5(@types/node@18.19.68)(rollup@4.28.1)(typescript@5.7.2)(yaml@2.6.1))
       '@hideoo/starlight-plugins-docs-components':
-        specifier: ^0.2.2
-        version: 0.2.2(@astrojs/starlight@0.30.1(astro@5.0.5(@types/node@18.19.68)(rollup@4.28.1)(typescript@5.7.2)(yaml@2.6.1)))(astro@5.0.5(@types/node@18.19.68)(rollup@4.28.1)(typescript@5.7.2)(yaml@2.6.1))
+        specifier: ^0.3.0
+        version: 0.3.0(@astrojs/starlight@0.30.1(astro@5.0.5(@types/node@18.19.68)(rollup@4.28.1)(typescript@5.7.2)(yaml@2.6.1)))(astro@5.0.5(@types/node@18.19.68)(rollup@4.28.1)(typescript@5.7.2)(yaml@2.6.1))
       astro:
         specifier: ^5.0.5
         version: 5.0.5(@types/node@18.19.68)(rollup@4.28.1)(typescript@5.7.2)(yaml@2.6.1)
@@ -609,11 +609,11 @@ packages:
   '@hideoo/prettier-config@2.0.0':
     resolution: {integrity: sha512-qylbgiR1n1eQXfpy97+b6pbtE5tf4uxPIqCSE0mp9fw/Npc4CiUxJlMoiUYw169GXTaZzqH/lFVm2sbO2Id2Ug==}
 
-  '@hideoo/starlight-plugins-docs-components@0.2.2':
-    resolution: {integrity: sha512-SJUoeDvdMLgETbYn2GPXI4IDy7l2kWcfA458M4a4a6kAtTAIdguRTDgqNjPAuCyV9s74VDdKLPh3KCUvUTfBGg==}
+  '@hideoo/starlight-plugins-docs-components@0.3.0':
+    resolution: {integrity: sha512-NEPJo54GBhWD95ozHbXttrIzh4cDHIzJDOhsar6JgXp3HUI5jueNUpIRhm6PWHtmpZ4NC597ZAVYNT4BEqCTpw==}
     engines: {node: '>=18'}
     peerDependencies:
-      '@astrojs/starlight': '>=0.24.0'
+      '@astrojs/starlight': '>=0.30.0'
 
   '@hideoo/tsconfig@2.0.1':
     resolution: {integrity: sha512-orM6e/3fbb8+DhJpsh6PKIhgNww8Di/PUOxml4VCMeNuD8W/kHCXl+9sLm5uwYP5xOWZoXPa++15HS9j21Xvag==}
@@ -3101,18 +3101,17 @@ packages:
   stable-hash@0.0.4:
     resolution: {integrity: sha512-LjdcbuBeLcdETCrPn9i8AYAZ1eCtu4ECAWtP7UleOiZ9LzVxRzzUZEoZ8zB24nhkQnDWyET0I+3sWokSDS3E7g==}
 
-  starlight-package-managers@0.6.0:
-    resolution: {integrity: sha512-2tE0B4ZVEZXZ1LJjcSvVXLfJP8SB2nE+nhiFgSa3fuHUPtnbzmFxLVp7jEKD8jaMXKWPYtlNTy95gJSK9W1sbQ==}
-    engines: {node: '>=18.14.1'}
+  starlight-package-managers@0.8.1:
+    resolution: {integrity: sha512-a+zGIOdbN7B4T/VaszuvW8585Aau4LSU8HlVCmBCJJwxkrGAUC9lRya4y0md5tOAFyW/gfhUNJZM8qqyMNTe7Q==}
+    engines: {node: '>=18.17.1'}
     peerDependencies:
       '@astrojs/starlight': '>=0.22.0'
-      astro: '>=4.2.7'
 
-  starlight-showcases@0.1.2:
-    resolution: {integrity: sha512-yj3RjcdWLIWdehTjne9Ethd3ff95vMbuVx/87lU4yilTQewQxjnAyOf1KSnGUgTMQT5WTqhDw8LciPBJox+b8Q==}
+  starlight-showcases@0.3.0:
+    resolution: {integrity: sha512-jxKVE5IM0TZgRIni4YK1oKDh6C9pBh94oj2pKuhzg2/Cg1wjCrWy39U3i1bXkh6rL+Ly+ypQBPH3AD9cP6TLXA==}
     engines: {node: '>=18'}
     peerDependencies:
-      '@astrojs/starlight': '>=0.23.0'
+      '@astrojs/starlight': '>=0.30.0'
 
   stream-replace-string@2.0.0:
     resolution: {integrity: sha512-TlnjJ1C0QrmxRNrON00JvaFFlNh5TTG00APw23j74ET7gkQpTASi6/L2fuiav8pzK715HXtUeClpBTw2NPSn6w==}
@@ -4251,11 +4250,11 @@ snapshots:
 
   '@hideoo/prettier-config@2.0.0': {}
 
-  '@hideoo/starlight-plugins-docs-components@0.2.2(@astrojs/starlight@0.30.1(astro@5.0.5(@types/node@18.19.68)(rollup@4.28.1)(typescript@5.7.2)(yaml@2.6.1)))(astro@5.0.5(@types/node@18.19.68)(rollup@4.28.1)(typescript@5.7.2)(yaml@2.6.1))':
+  '@hideoo/starlight-plugins-docs-components@0.3.0(@astrojs/starlight@0.30.1(astro@5.0.5(@types/node@18.19.68)(rollup@4.28.1)(typescript@5.7.2)(yaml@2.6.1)))(astro@5.0.5(@types/node@18.19.68)(rollup@4.28.1)(typescript@5.7.2)(yaml@2.6.1))':
     dependencies:
       '@astrojs/starlight': 0.30.1(astro@5.0.5(@types/node@18.19.68)(rollup@4.28.1)(typescript@5.7.2)(yaml@2.6.1))
-      starlight-package-managers: 0.6.0(@astrojs/starlight@0.30.1(astro@5.0.5(@types/node@18.19.68)(rollup@4.28.1)(typescript@5.7.2)(yaml@2.6.1)))(astro@5.0.5(@types/node@18.19.68)(rollup@4.28.1)(typescript@5.7.2)(yaml@2.6.1))
-      starlight-showcases: 0.1.2(@astrojs/starlight@0.30.1(astro@5.0.5(@types/node@18.19.68)(rollup@4.28.1)(typescript@5.7.2)(yaml@2.6.1)))(astro@5.0.5(@types/node@18.19.68)(rollup@4.28.1)(typescript@5.7.2)(yaml@2.6.1))
+      starlight-package-managers: 0.8.1(@astrojs/starlight@0.30.1(astro@5.0.5(@types/node@18.19.68)(rollup@4.28.1)(typescript@5.7.2)(yaml@2.6.1)))
+      starlight-showcases: 0.3.0(@astrojs/starlight@0.30.1(astro@5.0.5(@types/node@18.19.68)(rollup@4.28.1)(typescript@5.7.2)(yaml@2.6.1)))(astro@5.0.5(@types/node@18.19.68)(rollup@4.28.1)(typescript@5.7.2)(yaml@2.6.1))
     transitivePeerDependencies:
       - astro
 
@@ -7571,12 +7570,11 @@ snapshots:
 
   stable-hash@0.0.4: {}
 
-  starlight-package-managers@0.6.0(@astrojs/starlight@0.30.1(astro@5.0.5(@types/node@18.19.68)(rollup@4.28.1)(typescript@5.7.2)(yaml@2.6.1)))(astro@5.0.5(@types/node@18.19.68)(rollup@4.28.1)(typescript@5.7.2)(yaml@2.6.1)):
+  starlight-package-managers@0.8.1(@astrojs/starlight@0.30.1(astro@5.0.5(@types/node@18.19.68)(rollup@4.28.1)(typescript@5.7.2)(yaml@2.6.1))):
     dependencies:
       '@astrojs/starlight': 0.30.1(astro@5.0.5(@types/node@18.19.68)(rollup@4.28.1)(typescript@5.7.2)(yaml@2.6.1))
-      astro: 5.0.5(@types/node@18.19.68)(rollup@4.28.1)(typescript@5.7.2)(yaml@2.6.1)
 
-  starlight-showcases@0.1.2(@astrojs/starlight@0.30.1(astro@5.0.5(@types/node@18.19.68)(rollup@4.28.1)(typescript@5.7.2)(yaml@2.6.1)))(astro@5.0.5(@types/node@18.19.68)(rollup@4.28.1)(typescript@5.7.2)(yaml@2.6.1)):
+  starlight-showcases@0.3.0(@astrojs/starlight@0.30.1(astro@5.0.5(@types/node@18.19.68)(rollup@4.28.1)(typescript@5.7.2)(yaml@2.6.1)))(astro@5.0.5(@types/node@18.19.68)(rollup@4.28.1)(typescript@5.7.2)(yaml@2.6.1)):
     dependencies:
       '@astro-community/astro-embed-twitter': 0.5.8(astro@5.0.5(@types/node@18.19.68)(rollup@4.28.1)(typescript@5.7.2)(yaml@2.6.1))
       '@astro-community/astro-embed-youtube': 0.5.6(astro@5.0.5(@types/node@18.19.68)(rollup@4.28.1)(typescript@5.7.2)(yaml@2.6.1))
