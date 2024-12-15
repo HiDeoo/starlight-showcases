@@ -1,5 +1,6 @@
 ---
 import type { ImageMetadata } from 'astro'
+import type { ComponentProps } from 'astro/types'
 import { Image } from 'astro:assets'
 
 export type ShowcaseProfileCardProps = Props
@@ -21,6 +22,13 @@ if (typeof picture === 'string') {
   const imageImport = await picture
   src = imageImport.default
 }
+
+const imageProps = {
+  src,
+  alt: '',
+  height: '50',
+  width: '50',
+} as ComponentProps<typeof Image>
 ---
 
 <div class="starlight-showcases-profile-card">
@@ -30,7 +38,7 @@ if (typeof picture === 'string') {
     </a>
     {description && <span class="starlight-showcases-profile-description" set:html={description} />}
   </span>
-  <Image class="starlight-showcases-profile-picture" {src} alt="" width="50" height="50" />
+  <Image {...imageProps} class="starlight-showcases-profile-picture" alt="" />
 </div>
 
 <style>
