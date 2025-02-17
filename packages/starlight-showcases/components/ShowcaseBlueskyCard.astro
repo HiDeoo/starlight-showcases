@@ -1,0 +1,13 @@
+---
+import { BlueskyPost } from '@astro-community/astro-embed-bluesky'
+
+interface Props {
+  href: string
+}
+
+const { href } = Astro.props
+---
+
+<div class="starlight-showcases-bluesky-card">
+  <BlueskyPost id={href} />
+</div>

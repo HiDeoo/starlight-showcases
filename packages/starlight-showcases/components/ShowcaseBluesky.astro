@@ -1,0 +1,22 @@
+---
+import ShowcaseBlueskyCard from './ShowcaseBlueskyCard.astro'
+
+export type ShowcaseBlueskyProps = Props
+
+interface Props {
+  entries: string[]
+}
+
+const { entries } = Astro.props
+---
+
+<div class="not-content sl-flex">
+  {entries.map((href) => <ShowcaseBlueskyCard {href} />)}
+</div>
+
+<style>
+  div {
+    flex-direction: column;
+    gap: 1rem;
+  }
+</style>

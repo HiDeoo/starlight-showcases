@@ -1,0 +1,58 @@
+---
+title: Bluesky
+description: Learn how to use the Bluesky component to showcase posts.
+sidebar:
+  order: 6
+---
+
+The `<ShowcaseBluesky>` component can be used to showcase Bluesky posts.
+
+## Import
+
+```js
+import { ShowcaseBluesky } from 'starlight-showcases'
+```
+
+## Usage
+
+Specify a list of Bluesky posts to display using the `entries` prop.
+
+import { Preview } from '@hideoo/starlight-plugins-docs-components'
+import { ShowcaseBluesky } from 'starlight-showcases'
+
+<Preview>
+
+```mdx title="src/content/docs/showcase.mdx"
+import { ShowcaseBluesky } from 'starlight-showcases'
+
+<ShowcaseBluesky
+  entries={[
+    'https://bsky.app/profile/astro.build/post/3lifesehhok27',
+    'https://bsky.app/profile/astro.build/post/3ld7tgc2cts2l',
+  ]}
+/>
+```
+
+<ShowcaseBluesky
+  slot="preview"
+  entries={[
+    'https://bsky.app/profile/astro.build/post/3lifesehhok27',
+    'https://bsky.app/profile/astro.build/post/3ld7tgc2cts2l',
+  ]}
+/>
+
+</Preview>
+
+The `<ShowcaseBluesky>` component uses [Astro Embed](https://astro-embed.netlify.app/) to load a minimal version of Bluesky’s widget with zero JavaScript and only static HTML content.
+
+## Props
+
+The `<ShowcaseBluesky>` component accepts the following props:
+
+### `entries`
+
+**required**  
+**type:** `string[]`
+
+The list of Bluesky post URLs to display.
+See the [Usage](#usage) section for an example.
