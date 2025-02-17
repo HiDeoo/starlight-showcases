@@ -18,6 +18,11 @@ import { ShowcaseQuote } from 'starlight-showcases'
 Specify a list of text entries to display using the `entries` prop.
 Each entry should at least specify the quote and author while an optional link to the source or author can be provided.
 
+import { Preview } from '@hideoo/starlight-plugins-docs-components'
+import { ShowcaseQuote } from 'starlight-showcases'
+
+<Preview>
+
 ```mdx title="src/content/docs/showcase.mdx"
 import { ShowcaseQuote } from 'starlight-showcases'
 
@@ -38,11 +43,8 @@ import { ShowcaseQuote } from 'starlight-showcases'
 />
 ```
 
-The above code generates the following on the page:
-
-import { ShowcaseQuote } from 'starlight-showcases'
-
 <ShowcaseQuote
+  slot="preview"
   entries={[
     {
       quote: 'Starlight is amazing!',
@@ -57,6 +59,8 @@ import { ShowcaseQuote } from 'starlight-showcases'
     },
   ]}
 />
+
+</Preview>
 
 ## Props
 

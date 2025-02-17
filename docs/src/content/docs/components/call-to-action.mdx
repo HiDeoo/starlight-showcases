@@ -18,6 +18,11 @@ import { ShowcaseCTA } from 'starlight-showcases'
 Pass the content of the CTA as children of the `<ShowcaseCTA>` component to create a call to action.
 You can nest any other Markdown content inside a CTA.
 
+import { Preview } from '@hideoo/starlight-plugins-docs-components'
+import { ShowcaseCTA } from 'starlight-showcases'
+
+<Preview>
+
 ```mdx title="src/content/docs/showcase.mdx"
 import { ShowcaseCTA } from 'starlight-showcases'
 
@@ -27,18 +32,18 @@ import { ShowcaseCTA } from 'starlight-showcases'
 </ShowcaseCTA>
 ```
 
-The above code generates the following on the page:
-
-import { ShowcaseCTA } from 'starlight-showcases'
-
-<ShowcaseCTA>
+<ShowcaseCTA slot="preview">
   Have you built a showcase page? [Open a
   PR](https://github.com/HiDeoo/starlight-showcases) to add it to the list!
 </ShowcaseCTA>
 
+</Preview>
+
 ### Custom CTA title
 
 You can customize the title of the CTA by specifying it using the `title` prop.
+
+<Preview>
 
 ```mdx title="src/content/docs/showcase.mdx" 'title="Let us know!"'
 import { ShowcaseCTA } from 'starlight-showcases'
@@ -49,12 +54,12 @@ import { ShowcaseCTA } from 'starlight-showcases'
 </ShowcaseCTA>
 ```
 
-The above code generates the following on the page:
-
-<ShowcaseCTA title="Let us know!">
+<ShowcaseCTA slot="preview" title="Let us know!">
   Have you built a showcase page? [Open a
   PR](https://github.com/HiDeoo/starlight-showcases) to add it to the list!
 </ShowcaseCTA>
+
+</Preview>
 
 ## Props
 
