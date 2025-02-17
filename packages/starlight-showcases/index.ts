@@ -1,3 +1,4 @@
+export { default as ShowcaseBluesky, type ShowcaseBlueskyProps } from './components/ShowcaseBluesky.astro'
 export { default as ShowcaseCTA, type ShowcaseCTAProps } from './components/ShowcaseCTA.astro'
 export { default as ShowcaseText, type ShowcaseTextProps } from './components/ShowcaseText.astro'
 export { default as ShowcaseImage, type ShowcaseImageProps } from './components/ShowcaseImage.astro'
