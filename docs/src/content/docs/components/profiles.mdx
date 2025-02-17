@@ -18,6 +18,11 @@ import { ShowcaseProfile } from 'starlight-showcases'
 Specify a list of profile entries to display using the `entries` prop.
 Each entry should at least specify a name, picture and link to the respective page while an optional description can be provided.
 
+import { Preview } from '@hideoo/starlight-plugins-docs-components'
+import { ShowcaseProfile } from 'starlight-showcases'
+
+<Preview>
+
 ```mdx title="src/content/docs/showcase.mdx"
 import { ShowcaseProfile } from 'starlight-showcases'
 
@@ -41,11 +46,8 @@ import { ShowcaseProfile } from 'starlight-showcases'
 />
 ```
 
-The above code generates the following on the page:
-
-import { ShowcaseProfile } from 'starlight-showcases'
-
 <ShowcaseProfile
+  slot="preview"
   entries={[
     {
       name: 'Houston',
@@ -63,6 +65,8 @@ import { ShowcaseProfile } from 'starlight-showcases'
     },
   ]}
 />
+
+</Preview>
 
 ## Props
 

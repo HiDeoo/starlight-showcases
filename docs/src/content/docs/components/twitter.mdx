@@ -17,6 +17,11 @@ import { ShowcaseTwitter } from 'starlight-showcases'
 
 Specify a list of Twitter posts to display using the `entries` prop.
 
+import { Preview } from '@hideoo/starlight-plugins-docs-components'
+import { ShowcaseTwitter } from 'starlight-showcases'
+
+<Preview>
+
 ```mdx title="src/content/docs/showcase.mdx"
 import { ShowcaseTwitter } from 'starlight-showcases'
 
@@ -28,16 +33,15 @@ import { ShowcaseTwitter } from 'starlight-showcases'
 />
 ```
 
-The above code generates the following on the page:
-
-import { ShowcaseTwitter } from 'starlight-showcases'
-
 <ShowcaseTwitter
+  slot="preview"
   entries={[
     'https://x.com/astrodotbuild/status/1791519480696168572',
     'https://x.com/astrodotbuild/status/1726752143204393421',
   ]}
 />
+
+</Preview>
 
 The `<ShowcaseTwitter>` component uses [Astro Embed](https://astro-embed.netlify.app/) to load a minimal version of Twitter’s widget with zero JavaScript and only static HTML content.
 To convert the widgets into interactive embeds, check out the Astro Embed [“Loading Twitter’s JavaScript” guide](https://astro-embed.netlify.app/components/twitter/#loading-twitters-javascript).

@@ -20,6 +20,11 @@ Each entry should at least specify the image to display, a title and link to the
 
 Images use [Astro’s built-in optimized asset support](https://docs.astro.build/en/guides/images/) and should be provided as dynamic imports with relative paths to the image file stored in your project `src/` directory, e.g. `src/assets/showcase/image.png`.
 
+import { Preview } from '@hideoo/starlight-plugins-docs-components'
+import { ShowcaseImage } from 'starlight-showcases'
+
+<Preview>
+
 ```mdx title="src/content/docs/showcase.mdx"
 import { ShowcaseImage } from 'starlight-showcases'
 
@@ -44,11 +49,8 @@ import { ShowcaseImage } from 'starlight-showcases'
 />
 ```
 
-The above code generates the following on the page:
-
-import { ShowcaseImage } from 'starlight-showcases'
-
 <ShowcaseImage
+  slot="preview"
   entries={[
     {
       thumbnail: import('../../../assets/demo/starlight-openapi.png'),
@@ -67,6 +69,8 @@ import { ShowcaseImage } from 'starlight-showcases'
     },
   ]}
 />
+
+</Preview>
 
 ## Props
 

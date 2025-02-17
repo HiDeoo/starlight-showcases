@@ -18,6 +18,11 @@ import { ShowcaseYouTube } from 'starlight-showcases'
 Specify a list of YouTube videos to display using the `entries` prop.
 Each entry should at least specify a title and link to the video while an optional description can be provided.
 
+import { Preview } from '@hideoo/starlight-plugins-docs-components'
+import { ShowcaseYouTube } from 'starlight-showcases'
+
+<Preview>
+
 ```mdx title="src/content/docs/showcase.mdx"
 import { ShowcaseYouTube } from 'starlight-showcases'
 
@@ -35,11 +40,8 @@ import { ShowcaseYouTube } from 'starlight-showcases'
 />
 ```
 
-The above code generates the following on the page:
-
-import { ShowcaseYouTube } from 'starlight-showcases'
-
 <ShowcaseYouTube
+  slot="preview"
   entries={[
     {
       href: 'https://www.youtube.com/watch?v=5u0Ds7wzUeI',
@@ -51,6 +53,8 @@ import { ShowcaseYouTube } from 'starlight-showcases'
     },
   ]}
 />
+
+</Preview>
 
 ## Props
 

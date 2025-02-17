@@ -18,6 +18,11 @@ import { ShowcaseText } from 'starlight-showcases'
 Specify a list of text entries to display using the `entries` prop.
 Each entry should at least specify a title and link to the respective page while an optional description can be provided.
 
+import { Preview } from '@hideoo/starlight-plugins-docs-components'
+import { ShowcaseText } from 'starlight-showcases'
+
+<Preview>
+
 ```mdx title="src/content/docs/showcase.mdx"
 import { ShowcaseText } from 'starlight-showcases'
 
@@ -37,11 +42,8 @@ import { ShowcaseText } from 'starlight-showcases'
 />
 ```
 
-The above code generates the following on the page:
-
-import { ShowcaseText } from 'starlight-showcases'
-
 <ShowcaseText
+  slot="preview"
   entries={[
     {
       href: 'https://github.com/HiDeoo/starlight-links-validator',
@@ -55,6 +57,8 @@ import { ShowcaseText } from 'starlight-showcases'
     },
   ]}
 />
+
+</Preview>
 
 ## Props
 
