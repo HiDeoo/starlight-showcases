@@ -1,5 +1,11 @@
 # starlight-showcases
 
+## 0.3.1
+
+### Patch Changes
+
+- [#22](https://github.com/HiDeoo/starlight-showcases/pull/22) [`0325639`](https://github.com/HiDeoo/starlight-showcases/commit/032563906c30a4e7fe74efe9767b2bdfd50067ee) Thanks [@HiDeoo](https://github.com/HiDeoo)! - Setups trusted publishing using OpenID Connect (OIDC) authentication — no code changes.
+
 ## 0.3.0
 
 ### Minor Changes
