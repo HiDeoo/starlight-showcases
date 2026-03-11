@@ -1,5 +1,11 @@
 # starlight-showcases
 
+## 0.3.2
+
+### Patch Changes
+
+- [#24](https://github.com/HiDeoo/starlight-showcases/pull/24) [`29f4e1a`](https://github.com/HiDeoo/starlight-showcases/commit/29f4e1acfb31d878c1b4ab7cfbc2aa6cf0839d38) Thanks [@HiDeoo](https://github.com/HiDeoo)! - Adds support for Astro v6.
+
 ## 0.3.1
 
 ### Patch Changes
