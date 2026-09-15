@@ -19,9 +19,6 @@
   "peerDependencies": {
     "@astrojs/starlight": ">=0.30.0"
   },
-  "engines": {
-    "node": ">=22"
-  },
   "publishConfig": {
     "access": "public"
   },
